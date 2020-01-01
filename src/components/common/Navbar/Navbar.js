@@ -6,6 +6,7 @@ import { Container } from '@components/global';
 import {
   Nav,
   NavItem,
+  NavLinkItem,
   Brand,
   StyledContainer,
   NavListWrapper,
@@ -14,8 +15,10 @@ import {
 } from './style';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+// import { ReactComponent as FitalLogo } from '@images/logos/fital-1.svg';
+import { ReactComponent as FitalLogo } from '@images/logos/fital-2.svg';
 
-const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ'];
+const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ', 'Page-2'];
 
 class Navbar extends Component {
   state = {
@@ -38,6 +41,12 @@ class Navbar extends Component {
     </AnchorLink>
   );
 
+  getNavPageLink = item => (
+    <NavLinkItem href={`/${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+      {item}
+    </NavLinkItem>
+  );
+
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
@@ -47,7 +56,8 @@ class Navbar extends Component {
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem key={navItem} href={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          // <NavItem key={navItem} href={navItem}>{this.getNavPageLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
     </NavListWrapper>
@@ -59,7 +69,10 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Absurd</Brand>
+          {/* <Brand>From Idea to App Launch</Brand> */}
+          <Brand>
+            <FitalLogo />
+          </Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />

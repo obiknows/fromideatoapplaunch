@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { Container } from '@components/global';
 
 export const Nav = styled.nav`
-  padding: 16px 0;
+  // padding: 16px 0;
+  padding: 8px 0;
   background-color: ${props => props.theme.color.primary};
   position: fixed;
   width: 100%;
@@ -57,6 +58,24 @@ export const NavItem = styled.li`
   }
 `;
 
+export const NavLinkItem = styled.a`
+  margin: 0 0.75em;
+  font-family: ${props => props.theme.font.secondary};
+  ${props => props.theme.font_size.small};
+
+  a {
+    text-decoration: none;
+    opacity: 0.7;
+    color: ${props => props.theme.color.black.regular};
+  }
+
+  &.active {
+    a {
+      opacity: 1;
+    }
+  }
+`;
+
 export const MobileMenu = styled.div`
   width: 100%;
   background: ${props => props.theme.color.primary};
@@ -64,7 +83,7 @@ export const MobileMenu = styled.div`
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
-  ${props => props.theme.font_size.large};
+  // ${props => props.theme.font_size.large};
 `;
 
 export const Mobile = styled.div`

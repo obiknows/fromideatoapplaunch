@@ -10,6 +10,9 @@ import GithubIcon from '@static/icons/github.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
 
+var d = new Date();
+const currentYear = d.getFullYear();
+
 const SOCIAL = [
   {
     icon: GithubIcon,
@@ -29,9 +32,9 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_pot: file(
+        fital_logo: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
+          name: { eq: "fital_vertical" }
         ) {
           childImageSharp {
             fluid(maxWidth: 960) {
@@ -45,29 +48,30 @@ const Footer = () => (
       <React.Fragment>
         <Art>
           <Img
-            fluid={data.art_pot.childImageSharp.fluid}
+            fluid={data.fital_logo.childImageSharp.fluid}
             style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
           />
         </Art>
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <h2>Absurd</h2>
+              <h2>From Idea to App Launch</h2>
               <span>
-                Illustrations by
+                &copy; Copyright {currentYear}, Obi Knows Co
+                {/* Illustrations by
                 {` `}
                 <ExternalLink href="https://twitter.com/diana_valeanu">
                   @diana_valeanu
-                </ExternalLink>
+                </ExternalLink> */}
               </span>
             </Copyright>
-            <SocialIcons>
+            {/* <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
                   <img src={icon} alt="link" />
                 </ExternalLink>
               ))}
-            </SocialIcons>
+            </SocialIcons> */}
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
@@ -96,7 +100,7 @@ const FooterWrapper = styled.footer`
 
 const Copyright = styled.div`
   font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
+  ${props => props.theme.font_size.xsmall};
   color: ${props => props.theme.color.black.regular};
 
   a {

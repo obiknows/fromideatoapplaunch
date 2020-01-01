@@ -3,12 +3,12 @@ import Helmet from 'react-helmet';
 
 const SEO_DATA = {
   description: 'An absurd gatsby starter',
-  title: 'Absurd',
+  title: 'From Idea to App Launch',
   url: '',
-  author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
+  author: 'Obinna',
+  keywords: ['idea', 'app launch', 'apps', 'how to make an app', 'entrepreneurship', ],
   twitter: {
-    id: '@ajayns08',
+    id: '@fromideatoapplaunch',
     img: '',
   },
   facebook: {
@@ -20,11 +20,11 @@ const SEO_DATA = {
 const SEO = () => {
   return (
     <Helmet>
-      <meta property="fb:app_id" content={SEO_DATA.facebook.id} />
+      {/* <meta property="fb:app_id" content={SEO_DATA.facebook.id} /> */}
       <meta property="og:title" content={SEO_DATA.title} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={SEO_DATA.url} />
-      <meta property="og:image" content={SEO_DATA.facebook.img} />
+      {/* <meta property="og:image" content={SEO_DATA.facebook.img} /> */}
       <meta property="og:description" content={SEO_DATA.description} />
 
       <meta name="twitter:card" content="summary_large_image" />
