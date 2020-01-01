@@ -48,7 +48,8 @@ const About = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Speed past the competition</h2>
+              {/* <h2>Speed past the competition</h2> */}
+              <h2>So you've got an app idea,<br/> what now?</h2>
               <p>
                 Gatsby.js builds the fastest possible website. Instead of
                 waiting to generate pages when requested, pre-build pages and

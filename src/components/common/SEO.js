@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 const SEO_DATA = {
   description: 'An absurd gatsby starter',
   title: 'From Idea to App Launch',
-  url: '',
+  url: 'https://fromideatoapplaunch.com',
   author: 'Obinna',
   keywords: ['idea', 'app launch', 'apps', 'how to make an app', 'entrepreneurship', ],
   twitter: {
