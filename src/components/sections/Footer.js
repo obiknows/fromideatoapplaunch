@@ -57,7 +57,7 @@ const Footer = () => (
             <Copyright>
               <h2>From Idea to App Launch</h2>
               <span>
-                &copy; Copyright {currentYear}, Obi Knows Co
+                &copy; Copyright {currentYear}, IMEWE Inc.
                 {/* Illustrations by
                 {` `}
                 <ExternalLink href="https://twitter.com/diana_valeanu">

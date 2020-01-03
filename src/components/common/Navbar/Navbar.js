@@ -18,7 +18,7 @@ import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 // import { ReactComponent as FitalLogo } from '@images/logos/fital-1.svg';
 import { ReactComponent as FitalLogo } from '@images/logos/fital-2.svg';
 
-const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ', 'Page-2'];
+const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ',];
 
 class Navbar extends Component {
   state = {

@@ -7,12 +7,12 @@ import ExternalLink from '@common/ExternalLink';
 
 const FAQS = [
   {
-    title: 'What tech does Gatsby use?',
+    title: 'Who is this course for?',
     content: () => (
       <>
-        Enjoy the power of the latest web technologies – React.js , Webpack ,
-        modern JavaScript and CSS and more — all set up and waiting for you to
-        start building
+        This course is for the Business Owner, Aspiring App Developer, Code Novice,
+        Future Startup Founder, and any one with an app idea who wants to learn how to
+        validate that their idea is useful, valueable, and get to app launch by 
       </>
     ),
   },
@@ -67,7 +67,7 @@ const FAQS = [
 const Faq = () => (
   <Section id="faq">
     <Container>
-      <h1 style={{ marginBottom: 40 }}>Frequently Asked Questions</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: 40 }}>Frequently Asked Questions</h1>
       <div>
         {FAQS.map(({ title, content }) => (
           <FaqItem title={title} key={title}>

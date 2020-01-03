@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
+import FitalRocketGroup from '@images/art/fital-rocket-group.svg';
 
 const Header = () => (
   <StaticQuery
@@ -24,10 +25,10 @@ const Header = () => (
     `}
     render={data => (
       <HeaderWrapper>
-        <Container>
+        <Container style={{paddingBottom: 24}}>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <img src={FitalRocketGroup} alt="link" />
             </Art>
             <Text>
               <h1>
