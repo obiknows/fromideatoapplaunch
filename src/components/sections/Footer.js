@@ -4,29 +4,29 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+// import ExternalLink from '@common/ExternalLink';
 
-import GithubIcon from '@static/icons/github.svg';
-import InstagramIcon from '@static/icons/instagram.svg';
-import TwitterIcon from '@static/icons/twitter.svg';
+// import GithubIcon from '@static/icons/github.svg';
+// import InstagramIcon from '@static/icons/instagram.svg';
+// import TwitterIcon from '@static/icons/twitter.svg';
 
 var d = new Date();
 const currentYear = d.getFullYear();
 
-const SOCIAL = [
-  {
-    icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
-  },
-  {
-    icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
-  },
-  {
-    icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
-  },
-];
+// const SOCIAL = [
+//   {
+//     icon: GithubIcon,
+//     link: 'https://github.com/ajayns/gatsby-absurd',
+//   },
+//   {
+//     icon: InstagramIcon,
+//     link: 'https://instagram.com/ajay_ns',
+//   },
+//   {
+//     icon: TwitterIcon,
+//     link: 'https://twitter.com/ajayns08',
+//   },
+// ];
 
 const Footer = () => (
   <StaticQuery
@@ -34,7 +34,7 @@ const Footer = () => (
       query {
         fital_logo: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fital_vertical" }
+          name: { eq: "fital_full" }
         ) {
           childImageSharp {
             fluid(maxWidth: 960) {
@@ -49,7 +49,7 @@ const Footer = () => (
         <Art>
           <Img
             fluid={data.fital_logo.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
+            style={{ width: 480, maxWidth: '100%', marginBottom: 33 }}
           />
         </Art>
         <FooterWrapper>
@@ -79,19 +79,19 @@ const Footer = () => (
   />
 );
 
-const SocialIcons = styled.div`
-  display: flex;
+// const SocialIcons = styled.div`
+//   display: flex;
 
-  img {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-  }
+//   img {
+//     margin: 0 8px;
+//     width: 24px;
+//     height: 24px;
+//   }
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-top: 40px;
-  }
-`;
+//   @media (max-width: ${props => props.theme.screen.sm}) {
+//     margin-top: 40px;
+//   }
+// `;
 
 const FooterWrapper = styled.footer`
   background-color: ${props => props.theme.color.primary};

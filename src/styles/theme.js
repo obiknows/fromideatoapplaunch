@@ -1,6 +1,8 @@
 const theme = {
   font: {
-    primary: `'Prata', serif`,
+    primary: `'IBM Plex Sans', sans-serif`,
+    // primary: `'Cabin', serif`,
+    // primary: `'Prata', serif`,
     secondary: `'Average', serif`,
   },
   font_size: {
@@ -10,6 +12,7 @@ const theme = {
     large: 'font-size: 30px; line-height: 40px',
     larger: 'font-size: 36px; line-height: 48px',
     xlarge: 'font-size: 48px; line-height: 56px',
+    xxlarge: 'font-size: 60px; line-height: 66px',
   },
   color: {
     white: {

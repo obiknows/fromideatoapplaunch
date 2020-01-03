@@ -96,6 +96,10 @@ const Text = styled.div`
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
   }
+
+  h1 {
+    ${props => props.theme.font_size.xxlarge};
+  }
 `;
 
 const StyledExternalLink = styled(ExternalLink)`
