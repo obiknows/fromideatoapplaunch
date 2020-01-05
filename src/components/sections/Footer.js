@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
 import { Container } from '@components/global';
+
+// import Img from 'gatsby-image';
 // import ExternalLink from '@common/ExternalLink';
 
 // import GithubIcon from '@static/icons/github.svg';
@@ -46,12 +46,6 @@ const Footer = () => (
     `}
     render={data => (
       <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.fital_logo.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: 33 }}
-          />
-        </Art>
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
@@ -109,12 +103,12 @@ const Copyright = styled.div`
   }
 `;
 
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
-`;
+// const Art = styled.figure`
+//   display: flex;
+//   justify-content: center;
+//   margin: 0;
+//   margin-top: 48px;
+// `;
 
 const StyledContainer = styled(Container)`
   display: flex;

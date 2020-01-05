@@ -4,7 +4,8 @@ import { StaticQuery, graphql } from 'gatsby';
 // import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+// import ExternalLink from '@common/ExternalLink';
+import InternalLink from '@common/InternalLink';
 import FitalRocketGroup from '@images/art/fital-rocket-group.svg';
 
 const Header = () => (
@@ -40,9 +41,12 @@ const Header = () => (
               </h1>
               <br />
               <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Enroll Now and get it out &nbsp;&#x2794;
-                </StyledExternalLink>
+                <StyledInternalLink href="/course" style={{marginRight: 10}} >
+                  Enroll Now &nbsp;&#x2794;
+                </StyledInternalLink>
+                <StyledInternalLink href="#about" secondary>
+                  Learn More
+                </StyledInternalLink>
               </p>
             </Text>
           </Grid>
@@ -103,8 +107,13 @@ const Text = styled.div`
   }
 `;
 
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
+const StyledInternalLink = styled(InternalLink)`
+  // color: ${props => props.color};
+  color: ${props => props.theme.color.white.regular};
+  background-color: ${props => props.secondary ? props.theme.color.red.dark: props.theme.color.red.regular};
+  border-radius: 5px;
+  padding: 10px;
+  // color: inherit;
   text-decoration: none;
 
   &:hover {

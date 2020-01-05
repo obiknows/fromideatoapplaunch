@@ -70,7 +70,7 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           {/* <Brand>From Idea to App Launch</Brand> */}
-          <Brand>
+          <Brand href='/'>
             <FitalLogo />
           </Brand>
           <Mobile>

@@ -26,6 +26,10 @@ const theme = {
     },
     // primary: '#8bd8ed',
     primary: '#8bd8ed',
+    red: {
+      regular: '#ED5172',
+      dark: '#C33C58'
+    }
   },
   screen: {
     xs: '575px',

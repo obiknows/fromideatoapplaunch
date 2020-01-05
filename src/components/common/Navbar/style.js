@@ -81,7 +81,7 @@ export const MobileMenu = styled.div`
   background: ${props => props.theme.color.primary};
 `;
 
-export const Brand = styled.div`
+export const Brand = styled.a`
   font-family: ${props => props.theme.font.primary};
   // ${props => props.theme.font_size.large};
 `;
