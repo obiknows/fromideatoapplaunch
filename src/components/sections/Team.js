@@ -70,7 +70,7 @@ const Team = () => (
     `}
     render={data => (
       <Section id="team" accent="secondary">
-        <Container style={{ position: 'relative' }}>
+        <Container style={{ position: 'relative', width: '80%' }}>
           <h1>Meet The Instructor</h1>
           <TeamGrid>
             <div id="team-photo">

@@ -17,7 +17,7 @@ const FAQS = [
     ),
   },
   {
-    title: 'Where can you source data from?',
+    title: 'What will I learn from this course?',
     content: () => (
       <>
         Gatsby’s rich data plugin ecosystem lets you build sites with the data
@@ -28,7 +28,7 @@ const FAQS = [
     ),
   },
   {
-    title: 'How do I scale Gatsby sites?',
+    title: 'Where will the course take place?',
     content: () => (
       <>
         Gatsby.js is Internet Scale. Forget complicated deploys with databases
@@ -39,7 +39,7 @@ const FAQS = [
     ),
   },
   {
-    title: 'How does do I future-proof my website?',
+    title: 'When does the course start / take place?',
     content: () => (
       <>
         Do not build a website with last decade’s tech. The future of the web is
@@ -51,7 +51,7 @@ const FAQS = [
     ),
   },
   {
-    title: 'What exactly does Gatsby build?',
+    title: 'How can I get this course?',
     content: () => (
       <>
         Gatsby.js is a static PWA (Progressive Web App) generator. You get code
@@ -67,7 +67,8 @@ const FAQS = [
 const Faq = () => (
   <Section id="faq">
     <Container>
-      <h1 style={{ textAlign: 'center', marginBottom: 40 }}>Frequently Asked Questions</h1>
+      <h1 style={{ textAlign: 'center' }}>Frequently Asked Questions</h1>
+      <h4 style={{ textAlign: 'center', marginBottom: 40 }}>{"We get it, you've got questions. We've got answers"}</h4>
       <div>
         {FAQS.map(({ title, content }) => (
           <FaqItem title={title} key={title}>
